@@ -19,10 +19,9 @@ from tenacity import *
 from telegram import InlineKeyboardMarkup
 from telegraph import Telegraph
 
-from bot import parent_id, DOWNLOAD_DIR, IS_TEAM_DRIVE, INDEX_URL, \
-    USE_SERVICE_ACCOUNTS, download_dict
-from bot.helper.ext_utils.bot_utils import *
-from bot.helper.ext_utils.fs_utils import get_mime_type
+from bot.config import IS_TEAM_DRIVE, \
+            USE_SERVICE_ACCOUNTS, GDRIVE_FOLDER_ID, INDEX_URL
+from bot.fs_utils import get_mime_type
 
 LOGGER = logging.getLogger(__name__)
 logging.getLogger('googleapiclient.discovery').setLevel(logging.ERROR)
